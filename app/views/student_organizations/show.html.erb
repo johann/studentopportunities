@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @student_organization.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @student_organization.description %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @student_organization.gpa %>
+</p>
+
+<p>
+  <b>Infourl:</b>
+  <%= @student_organization.infourl %>
+</p>
+
+<p>
+  <b>Applyurl:</b>
+  <%= @student_organization.applyurl %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_organization_path(@student_organization) %> |
+<%= link_to 'Back', student_organizations_path %>

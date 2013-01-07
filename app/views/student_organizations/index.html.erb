@@ -1,0 +1,23 @@
+<h1>Student Organizations</h1>
+
+
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+<% @student_organizations.each do |student_organization| %>
+<div class="box">
+    <%= student_organization.name %>
+    <%= student_organization.description %>
+    <%= student_organization.gpa %>
+    <%= link_to "More Info", student_organization.infourl %>
+
+    <%= link_to "Apply", student_organization.applyurl %>
+    <%= link_to 'Show', student_organization %>
+    <%= link_to 'Edit', edit_student_organization_path(student_organization) %>
+    <%= link_to 'Destroy', student_organization, confirm: 'Are you sure?', method: :delete %>
+    <br></li>
+</div>
+
+<% end %>
+
+</div>
+
+

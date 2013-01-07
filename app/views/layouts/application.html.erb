@@ -2,30 +2,46 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Sop" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Sop" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Student Opportunities" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Student Opportunities" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <header class="navbar navbar-fixed-top">
+    <header class="navbar navbar-fixed-top navbar-inverse">
       <nav class="navbar-inner">
         <div class="container">
           <%= render 'layouts/navigation' %>
+
         </div>
       </nav>
     </header>
     <div id="main" role="main">
-      <div class="container">
-        <div class="content">
+      <div class="">
+       
            <div class="row">
-            <div class="span12">
+            <div class="span3 poop">
+              <ul class="nav nav-tabs nav-stacked">
+                <li class="active"><%= link_to 'Student Organizations' %></li>
+                <li><%= link_to 'Greek Organizations' %></li>
+                <li><%= link_to 'Academic Honor Societies' %></li>
+                <li><%= link_to 'University Honor Societies' %></li>
+                <li><%= link_to 'University Programs' %></li>
+                <li><%= link_to 'Graduate Assistantships' %></li>
+                <li><%= link_to 'Scholarships/Grants' %></li>
+                <li><%= link_to 'Job Opportunities' %></li>
+                <li><%= link_to 'Internships' %></li>
+                <li><%= link_to 'Other' %></li>
+              </ul>
+              <%= link_to 'New Student organization', new_student_organization_path %>
+
+            </div>
+            <div class="span9">
               <%= render 'layouts/messages' %>
               <%= yield %>
             </div>
-          </div>
           <footer>
           </footer>
         </div>
