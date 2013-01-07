@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @greek_organization.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @greek_organization.description %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @greek_organization.gpa %>
+</p>
+
+<p>
+  <b>Applyurl:</b>
+  <%= @greek_organization.applyurl %>
+</p>
+
+
+<%= link_to 'Edit', edit_greek_organization_path(@greek_organization) %> |
+<%= link_to 'Back', greek_organizations_path %>

@@ -1,4 +1,8 @@
 Sop::Application.routes.draw do
+  resources :greek_organizations do
+    collection { post :import }
+  end
+
   resources :student_organizations do
     collection { post :import }
   end
