@@ -21,6 +21,7 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.0"
 gem "roo"
 
+
 group :development do
 	gem 'sqlite3'
 end

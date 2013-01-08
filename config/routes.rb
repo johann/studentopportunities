@@ -1,4 +1,8 @@
 Sop::Application.routes.draw do
+  resources :academic_honor_societies do
+    collection { post :import }
+  end
+
   resources :greek_organizations do
     collection { post :import }
   end
@@ -11,7 +15,7 @@ Sop::Application.routes.draw do
     root :to => 'home#index'
   end
 
-  root :to => "student_organizations#index"
+  root :to => "home#index"
   
   devise_for :users
   resources :users

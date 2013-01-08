@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107043652) do
+ActiveRecord::Schema.define(:version => 20130107200001) do
+
+  create_table "academic_honor_societies", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "greek_organizations", :force => true do |t|
     t.string   "name"

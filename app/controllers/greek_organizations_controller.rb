@@ -71,7 +71,7 @@ class GreekOrganizationsController < ApplicationController
 
   def import
   GreekOrganization.import(params[:file])
-  redirect_to root_url, notice: "Greek Organizations imported."
+  redirect_to greek_organizations_url, notice: "Greek Organizations imported."
   end
 
   # DELETE /greek_organizations/1
