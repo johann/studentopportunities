@@ -1,4 +1,20 @@
 Sop::Application.routes.draw do
+  resources :scholarship_grants do
+    collection { post :import }
+  end
+
+  resources :graduate_assistantships do
+    collection { post :import }
+  end
+
+  resources :university_programs do
+    collection { post :import }
+  end
+
+  resources :university_honor_societies do
+    collection { post :import }
+  end
+
   resources :academic_honor_societies do
     collection { post :import }
   end

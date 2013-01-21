@@ -11,10 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107200001) do
+ActiveRecord::Schema.define(:version => 20130116044750) do
 
   create_table "academic_honor_societies", :force => true do |t|
     t.string   "name"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "graduate_assistantships", :force => true do |t|
+    t.string   "division"
+    t.string   "department"
     t.text     "description"
     t.float    "gpa"
     t.string   "infourl"
@@ -43,7 +54,38 @@ ActiveRecord::Schema.define(:version => 20130107200001) do
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
+  create_table "scholarship_grants", :force => true do |t|
+    t.string   "organization"
+    t.string   "scholarship"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "student_organizations", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "university_honor_societies", :force => true do |t|
+    t.string   "organization"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "university_programs", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.float    "gpa"

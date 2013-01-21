@@ -1,0 +1,16 @@
+<h1>Scholarship Grants</h1>
+
+<div id="masonry-container">
+<% @scholarship_grants.each do |scholarship_grant| %>
+<div class="box">
+    <h6> <%= link_to scholarship_grant.organization, scholarship_grant.infourl  %> - <%= scholarship_grant.scholarship %></h6>
+    <%= scholarship_grant.description %>
+    <%= scholarship_grant.gpa %>
+    <%= link_to 'Destroy', graduate_assistantship, method: :delete %>
+
+  
+</div>
+
+<% end %>
+
+</div>
