@@ -2,7 +2,8 @@ class StudentOrganizationsController < ApplicationController
   # GET /student_organizations
   # GET /student_organizations.json
   def index
-    @student_organizations = StudentOrganization.all
+    #@student_organizations = StudentOrganization.all
+    @student_organizations = StudentOrganization.text_search(params[:query])
 
     respond_to do |format|
       format.html # index.html.erb

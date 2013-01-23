@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130123162125) do
+ActiveRecord::Schema.define(:version => 20130123213435) do
 
   create_table "academic_honor_societies", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(:version => 20130123162125) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "internships", :force => true do |t|
+    t.string   "organization"
+    t.string   "program"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "job_opportunities", :force => true do |t|
     t.string   "division"
     t.string   "department"
@@ -54,6 +65,25 @@ ActiveRecord::Schema.define(:version => 20130123162125) do
     t.string   "status"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "others", :force => true do |t|
+    t.string   "organization"
+    t.string   "program"
+    t.text     "description"
+    t.float    "gpa"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "pg_search_documents", :force => true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "roles", :force => true do |t|

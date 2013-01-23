@@ -1,19 +1,13 @@
-class StudentOrganization < ActiveRecord::Base
-attr_accessible :description, :gpa, :infourl, :name
-
- include PgSearch
-  multisearchable :against => [:name],
-  using: {tsearch: {dictionary: "english"}}
-
-
-def self.import(file)
+class Internship < ActiveRecord::Base
+	attr_accessible :program, :description, :gpa, :infourl, :applyurl, :organization
+	def self.import(file)
   spreadsheet = open_spreadsheet(file)
   header = spreadsheet.row(1)
   (2..spreadsheet.last_row).each do |i|
     row = Hash[[header, spreadsheet.row(i)].transpose]
-    student_organization = find_by_id(row["id"]) || new
-   	student_organization.attributes = row.to_hash.slice(*accessible_attributes)
-    student_organization.save!
+    internship = find_by_id(row["id"]) || new
+   	internship.attributes = row.to_hash.slice(*accessible_attributes)
+    internship.save!
   end
 end
 

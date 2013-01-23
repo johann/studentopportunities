@@ -1,5 +1,11 @@
 <h1>Student Organizations</h1>
 
+<%= form_tag student_organizations_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", name: nil %>
+  </p>
+<% end %>
 
 <div id="masonry-container">
 <% @student_organizations.each do |student_organization| %>
