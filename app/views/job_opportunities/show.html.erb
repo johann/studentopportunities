@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Division:</b>
+  <%= @job_opportunity.division %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @job_opportunity.department %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @job_opportunity.position %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job_opportunity.description %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @job_opportunity.gpa %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @job_opportunity.contact %>
+</p>
+
+<p>
+  <b>Mailto:</b>
+  <%= @job_opportunity.mailto %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @job_opportunity.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_opportunity_path(@job_opportunity) %> |
+<%= link_to 'Back', job_opportunities_path %>

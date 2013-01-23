@@ -71,7 +71,7 @@ class ScholarshipGrantsController < ApplicationController
 
   def import
   ScholarshipGrant.import(params[:file])
-  redirect_to scholarship_grant_url, notice: "Scholarships and Grants imported."
+  redirect_to scholarship_grants_url, notice: "Scholarships and Grants imported."
   end
 
   # DELETE /scholarship_grants/1

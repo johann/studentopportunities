@@ -1,4 +1,8 @@
 Sop::Application.routes.draw do
+  resources :job_opportunities do
+    collection { post :import }
+  end
+
   resources :scholarship_grants do
     collection { post :import }
   end

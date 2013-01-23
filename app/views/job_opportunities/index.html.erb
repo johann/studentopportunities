@@ -1,0 +1,19 @@
+<h1>Job Opportunities</h1>
+
+<div id="masonry-container">
+<% @job_opportunities.each do |job_opportunity| %>
+<div class="box">
+    <h6> <%= job_opportunity.position%></h6>
+
+    <%= job_opportunity.department%> - <%= job_opportunity.division %>
+    <%= job_opportunity.description %>
+    <%= job_opportunity.gpa %>
+    <%= job_opportunity.status %>
+    <%= mail_to job_opportunity.mailto, job_opportunity.contact %>
+    
+  
+</div>
+
+<% end %>
+
+</div>
