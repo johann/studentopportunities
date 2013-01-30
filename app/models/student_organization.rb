@@ -1,10 +1,7 @@
 class StudentOrganization < ActiveRecord::Base
 attr_accessible :description, :gpa, :infourl, :name
 
- include PgSearch
-  multisearchable :against => [:name],
-  using: {tsearch: {dictionary: "english"}}
-
+ 
 
 def self.import(file)
   spreadsheet = open_spreadsheet(file)
