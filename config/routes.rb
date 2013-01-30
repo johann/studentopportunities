@@ -1,4 +1,5 @@
 Sop::Application.routes.draw do
+  
   resources :others do
     collection { post :import }
   end
