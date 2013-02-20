@@ -20,7 +20,7 @@ tile-group {
   cursor: pointer;
   box-shadow: inset 0px 0px 1px #FFFFCC;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   overflow: hidden;
   position: relative;
   font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
@@ -30,9 +30,15 @@ tile-group {
   line-height: 20px;
   margin: 0 10px 10px 0;
   overflow: hidden;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 .tile * {
-  color: #ffffff;
+  color: #000000;
 }
 .tile .tile-content {
   width: 100%;
@@ -306,44 +312,38 @@ tile-group {
   outline: 3px #3a3a3a solid;
 }
 
+.fg-color-deep {
+  color: #4F1931 !important;
+}
 .fg-color-blue {
-  color: #2d89ef !important;
+  color: #373f80 !important;
 }
 .fg-color-blueLight {
-  color: #eff4ff !important;
-}
-.fg-color-blueDark {
-  color: #2b5797 !important;
-}
-.fg-color-green {
-  color: #00a300 !important;
-}
-.fg-color-greenLight {
-  color: #99b433 !important;
-}
-.fg-color-greenDark {
-  color: #1e7145 !important;
-}
-.fg-color-red {
-  color: #b91d47 !important;
-}
-.fg-color-yellow {
-  color: #ffc40d !important;
-}
-.fg-color-orange {
-  color: #e3a21a !important;
-}
-.fg-color-orangeDark {
-  color: #da532c !important;
-}
-.fg-color-pink {
-  color: #9f00a7 !important;
-}
-.fg-color-pinkDark {
-  color: #7e3878 !important;
+  color: #1b73a1 !important;
 }
 .fg-color-purple {
-  color: #603cba !important;
+  color: #5d415a !important;
+}
+.fg-color-green {
+  color: #166842 !important;
+}
+.fg-color-greenLight {
+  color: #8fa43f !important;
+}
+.fg-color-red {
+  color: #893109 !important;
+}
+.fg-color-grey {
+  color: #363636 !important;
+}
+.fg-color-orange {
+  color: #f85800 !important;
+}
+.fg-color-orangeDark {
+  color: #b15f0d !important;
+}
+.fg-color-pink {
+  color: #ed0677 !important;
 }
 .fg-color-darken {
   color: #1d1d1d !important;
@@ -356,6 +356,9 @@ tile-group {
 }
 .fg-color-grayDark {
   color: #525252 !important;
+}
+.bg-color-new {
+  background-color: #8b5a2b !important;
 }
 .bg-color-blue {
   background-color: #2d89ef !important;
@@ -398,12 +401,6 @@ tile-group {
 }
 .bg-color-purple {
   background-color: #603cba !important;
-}
-.bg-color-new2 {
-  background-color: #cccccc !important;
-}
-.bg-color-new2 {
-  background-color: #cccccc !important;
 }
 .bg-color-new2 {
   background-color: #cccccc !important;

@@ -6,6 +6,7 @@
 .box {
   margin: 5px;
   width: 220px;
+  height: 5em;
   padding: 5px;
   background: #D8D5D2;
   font-size: 11px;
@@ -15,4 +16,25 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
   display: block;
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+h1 {    
+
+      text-align: center;
+      color:#000;
+      font: 25px/1 "Impact";
+      text-transform: uppercase;
+      display: block;      
+      margin: 5% auto 5%;
+}
+
+.boxit{
+  
+  font-color: #fff;
 }

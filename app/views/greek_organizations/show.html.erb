@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class="boxit">
 <p>
   <b>Name:</b>
-  <%= @greek_organization.name %>
+  <p><%= @greek_organization.name %></p>
 </p>
 
 <p>
@@ -19,6 +20,7 @@
   <b>Applyurl:</b>
   <%= @greek_organization.applyurl %>
 </p>
+</div>
 
 
 <%= link_to 'Edit', edit_greek_organization_path(@greek_organization) %> |

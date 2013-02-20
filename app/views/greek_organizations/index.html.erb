@@ -3,9 +3,9 @@
 <div id="masonry-container">
 <% @greek_organizations.each do |greek_organization| %>
 <div class="box">
-   <h6> <%= link_to greek_organization.name, greek_organization.applyurl  %></h6>
-    <%= greek_organization.description %>
-    <%= greek_organization.gpa %>
+   <h1 id="fit"> <%= link_to(greek_organization.name).html_safe %></h1>
+    <!-- <%= greek_organization.description  %> 
+    <%= greek_organization.gpa %> -->
     
     <!--<%= link_to "More Info", greek_organization.applyurl, :class => '' %>
      

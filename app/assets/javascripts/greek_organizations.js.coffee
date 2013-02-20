@@ -4,3 +4,5 @@
 $(".box").click ->
   window.location = $(this).find("a").attr("href")
   false
+
+$("#fit").fitText()
