@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @honor_society.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @honor_society.description %>
+</p>
+
+<p>
+  <b>Mission:</b>
+  <%= @honor_society.mission %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @honor_society.gpa %>
+</p>
+
+<p>
+  <b>Orgsync:</b>
+  <%= @honor_society.orgsync %>
+</p>
+
+<p>
+  <b>Infourl:</b>
+  <%= @honor_society.infourl %>
+</p>
+
+<p>
+  <b>Applyurl:</b>
+  <%= @honor_society.applyurl %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%= @honor_society.major %>
+</p>
+
+
+<%= link_to 'Edit', edit_honor_society_path(@honor_society) %> |
+<%= link_to 'Back', honor_societies_path %>

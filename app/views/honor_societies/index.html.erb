@@ -1,0 +1,37 @@
+<h1>Listing honor_societies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Mission</th>
+    <th>Gpa</th>
+    <th>Orgsync</th>
+    <th>Infourl</th>
+    <th>Applyurl</th>
+    <th>Major</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @honor_societies.each do |honor_society| %>
+  <tr>
+    <td><%= honor_society.name %></td>
+    <td><%= honor_society.description %></td>
+    <td><%= honor_society.mission %></td>
+    <td><%= honor_society.gpa %></td>
+    <td><%= honor_society.orgsync %></td>
+    <td><%= honor_society.infourl %></td>
+    <td><%= honor_society.applyurl %></td>
+    <td><%= honor_society.major %></td>
+    <td><%= link_to 'Show', honor_society %></td>
+    <td><%= link_to 'Edit', edit_honor_society_path(honor_society) %></td>
+    <td><%= link_to 'Destroy', honor_society, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Honor society', new_honor_society_path %>

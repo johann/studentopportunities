@@ -1,0 +1,35 @@
+<h1>Listing scholarshipgrants</h1>
+
+<table>
+  <tr>
+    <th>Organization</th>
+    <th>Scholarship</th>
+    <th>Description</th>
+    <th>Gpa</th>
+    <th>Infourl</th>
+    <th>Applurl</th>
+    <th>Deadline</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scholarshipgrants.each do |scholarshipgrant| %>
+  <tr>
+    <td><%= scholarshipgrant.organization %></td>
+    <td><%= scholarshipgrant.scholarship %></td>
+    <td><%= scholarshipgrant.description %></td>
+    <td><%= scholarshipgrant.gpa %></td>
+    <td><%= scholarshipgrant.infourl %></td>
+    <td><%= scholarshipgrant.applurl %></td>
+    <td><%= scholarshipgrant.deadline %></td>
+    <td><%= link_to 'Show', scholarshipgrant %></td>
+    <td><%= link_to 'Edit', edit_scholarshipgrant_path(scholarshipgrant) %></td>
+    <td><%= link_to 'Destroy', scholarshipgrant, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scholarshipgrant', new_scholarshipgrant_path %>

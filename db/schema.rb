@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130123213435) do
+ActiveRecord::Schema.define(:version => 20130227195404) do
 
   create_table "academic_honor_societies", :force => true do |t|
     t.string   "name"
@@ -39,6 +39,19 @@ ActiveRecord::Schema.define(:version => 20130123213435) do
     t.text     "description"
     t.float    "gpa"
     t.string   "applyurl"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "honor_societies", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "mission"
+    t.float    "gpa"
+    t.string   "orgsync"
+    t.string   "infourl"
+    t.string   "applyurl"
+    t.string   "major"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -97,13 +110,14 @@ ActiveRecord::Schema.define(:version => 20130123213435) do
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
-  create_table "scholarship_grants", :force => true do |t|
+  create_table "scholarshipgrants", :force => true do |t|
     t.string   "organization"
     t.string   "scholarship"
-    t.text     "description"
+    t.string   "description"
     t.float    "gpa"
     t.string   "infourl"
-    t.string   "applyurl"
+    t.string   "applurl"
+    t.string   "deadline"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

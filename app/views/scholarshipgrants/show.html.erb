@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Organization:</b>
+  <%= @scholarshipgrant.organization %>
+</p>
+
+<p>
+  <b>Scholarship:</b>
+  <%= @scholarshipgrant.scholarship %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @scholarshipgrant.description %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @scholarshipgrant.gpa %>
+</p>
+
+<p>
+  <b>Infourl:</b>
+  <%= @scholarshipgrant.infourl %>
+</p>
+
+<p>
+  <b>Applurl:</b>
+  <%= @scholarshipgrant.applurl %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%= @scholarshipgrant.deadline %>
+</p>
+
+
+<%= link_to 'Edit', edit_scholarshipgrant_path(@scholarshipgrant) %> |
+<%= link_to 'Back', scholarshipgrants_path %>
